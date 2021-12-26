@@ -1,0 +1,15 @@
+create database SecretMessaging;
+use SecretMessaging;
+
+create table Accounts(
+Username varchar(50) primary key,
+Password varchar(50),
+SecurityQuestion varchar(70),
+Answer varchar(20));
+
+create table SecretMessages(
+AssignedPin varchar(7) primary key,
+Title varchar(20),
+SecretMessage varchar(10000),
+CodesApplied varchar(50),
+Account varchar(50));
